@@ -1,0 +1,34 @@
+<odoo>
+    <data>
+    <record id="tipo_multa_exceso_velocidad" model="gestion.tipo_multa">
+        <field name="name">Exceso de Velocidad</field>
+    </record>
+    <record id="tipo_multa_estacionamiento_indebido" model="gestion.tipo_multa">
+        <field name="name">Estacionamiento Prohibido</field>
+    </record>
+    <record id="tipo_multa_alcohol_drogas" model="gestion.tipo_multa">
+        <field name="name">Conducir bajo efectos de alcohol o drogas</field>
+    </record>
+    <record id="tipo_multa_movil_telefonico" model="gestion.tipo_multa">
+        <field name="name">Uso de móvil mientras conduce</field>
+    </record>
+    <record id="tipo_multa_no_uso_cinturon" model="gestion.tipo_multa">
+        <field name="name">No uso del cinturón de seguridad</field>
+    </record>
+    <record id="tipo_multa_semaforo" model="gestion.tipo_multa">
+        <field name="name">No respetar semáforos</field>
+    </record>
+    <record id="tipo_multa_adelantar" model="gestion.tipo_multa">
+        <field name="name">Adelantamiento indebido</field>
+    </record>
+    <record id="tipo_multa_documentacion" model="gestion.tipo_multa">
+        <field name="name">Falta de documentación del vehículo o conductor</field>
+    </record>
+    <record id="tipo_multa_temeraria" model="gestion.tipo_multa">
+        <field name="name">Conducción temeraria</field>
+    </record>
+    <record id="tipo_multa_otras" model="gestion.tipo_multa">
+        <field name="name">Otras infracciones</field>
+    </record>
+    </data>
+</odoo>

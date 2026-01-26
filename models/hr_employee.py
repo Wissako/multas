@@ -4,3 +4,4 @@ class HREmployee(models.Model):
     _inherit = 'hr.employee'
 
     multas_ids = fields.One2many('gestion.multa', 'empleado_id', string="Multas")
+    vehiculo_ids = fields.One2many('gestion.vehiculo', 'conductor_id', string="Vehículos Asignados")

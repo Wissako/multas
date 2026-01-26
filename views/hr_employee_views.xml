@@ -1,0 +1,39 @@
+<odoo>
+  <data>
+    <record id="view_employee_form_inherit_multas_vehiculos" model="ir.ui.view">
+        <field name="name">hr.employee.form.inherit.multas.vehiculos</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//notebook" position="inside">
+                
+                <page string="Multas" invisible="not multas_ids">
+                    <field name="multas_ids">
+                        <list editable="bottom">
+                            <field name="tipo_multa_id"/>
+                            <field name="importe"/>
+                            <field name="pagada"/>
+                            <field name="descripcion"/>
+                        </list>
+                    </field>
+                </page>
+
+                <page string="Vehículo" invisible="not vehiculo_ids">
+                    <group>
+                        <field name="vehiculo_ids" readonly="1">
+                            <list>
+                                <field name="name" string="Matrícula"/>
+                                <field name="marca"/>
+                                <field name="modelo"/>
+                                <field name="kilometros"/>
+                            </list>
+                        </field>
+                    </group>
+                </page>
+
+            </xpath>
+        </field>
+    </record>
+  </data>
+</odoo>

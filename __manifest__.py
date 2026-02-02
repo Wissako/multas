@@ -27,6 +27,9 @@
         'views/menus.xml',
         'views/hr_employee_views.xml',   
         'views/vehiculo_view.xml',
+        'views/multa_views.xml',
+        'reports/report_actions.xml',
+        'reports/report_templates.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode

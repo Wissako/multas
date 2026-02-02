@@ -24,9 +24,10 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',                
-        'views/templates.xml',
+        'views/menus.xml',
         'views/hr_employee_views.xml',   
-        'views/vehiculo_view.xml',       
+        'views/vehiculo_view.xml',
+        'views/templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

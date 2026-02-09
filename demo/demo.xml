@@ -30,5 +30,82 @@
     <record id="tipo_multa_otras" model="gestion.tipo_multa">
         <field name="name">Otras infracciones</field>
     </record>
+        <record id="tipo_leve" model="gestion.tipo_multa">
+            <field name="name">Infracción Leve</field>
+        </record>
+
+        <record id="tipo_grave" model="gestion.tipo_multa">
+            <field name="name">Infracción Grave</field>
+        </record>
+
+        <record id="tipo_muy_grave" model="gestion.tipo_multa">
+            <field name="name">Infracción Muy Grave</field>
+        </record>
+
+
+        <record id="empleado_con_todo" model="hr.employee">
+            <field name="name">Juan Pérez (Tiene Coche y Multas)</field>
+            <field name="work_email">juan@ejemplo.com</field>
+        </record>
+
+        <record id="empleado_solo_coche" model="hr.employee">
+            <field name="name">Ana García (Solo Coche)</field>
+            <field name="work_email">ana@ejemplo.com</field>
+        </record>
+
+        <record id="empleado_limpio" model="hr.employee">
+            <field name="name">Carlos López (Sin nada)</field>
+            <field name="work_email">carlos@ejemplo.com</field>
+        </record>
+
+
+        <record id="vehiculo_1" model="gestion.vehiculo">
+            <field name="name">1234-ABC</field>
+            <field name="marca">Toyota</field>
+            <field name="modelo">Corolla</field>
+            <field name="kilometros">15000</field>
+            <field name="conductor_id" ref="empleado_con_todo"/>
+        </record>
+
+        <record id="vehiculo_2" model="gestion.vehiculo">
+            <field name="name">5678-DEF</field>
+            <field name="marca">Ford</field>
+            <field name="modelo">Fiesta</field>
+            <field name="kilometros">5000</field>
+            <field name="conductor_id" ref="empleado_solo_coche"/>
+        </record>
+
+        <record id="vehiculo_libre" model="gestion.vehiculo">
+            <field name="name">9012-GHI</field>
+            <field name="marca">Opel</field>
+            <field name="modelo">Corsa</field>
+            <field name="kilometros">100</field>
+            </record>
+
+
+        <record id="multa_1" model="gestion.multa">
+            <field name="empleado_id" ref="empleado_con_todo"/>
+            <field name="tipo_multa_id" ref="tipo_leve"/>
+            <field name="importe">50.00</field>
+            <field name="pagada">True</field>
+            <field name="descripcion">Aparcamiento en doble fila un momento.</field>
+        </record>
+
+        <record id="multa_2" model="gestion.multa">
+            <field name="empleado_id" ref="empleado_con_todo"/>
+            <field name="tipo_multa_id" ref="tipo_grave"/>
+            <field name="importe">200.00</field>
+            <field name="pagada">False</field>
+            <field name="descripcion">Exceso de velocidad en autopista (140km/h).</field>
+        </record>
+
+        <record id="multa_3" model="gestion.multa">
+            <field name="empleado_id" ref="empleado_solo_coche"/>
+            <field name="tipo_multa_id" ref="tipo_muy_grave"/>
+            <field name="importe">600.00</field>
+            <field name="pagada">False</field>
+            <field name="descripcion">Saltarse un semáforo en rojo.</field>
+        </record>
+
     </data>
 </odoo>

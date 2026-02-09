@@ -7,32 +7,10 @@
             <list string="Listado de Multas">
                 <field name="empleado_id"/>
                 <field name="tipo_multa_id"/>
-                <field name="importe" sum="Total Multas"/>
+                <field name="importe" sum="Total"/>
                 <field name="pagada"/>
                 <field name="descripcion"/>
             </list>
-        </field>
-    </record>
-
-    <record id="view_multa_search" model="ir.ui.view">
-        <field name="name">gestion.multa.search</field>
-        <field name="model">gestion.multa</field>
-        <field name="arch" type="xml">
-            <search string="Buscar Multas">
-                <field name="empleado_id"/>
-                <field name="descripcion"/>
-                
-                <filter string="Pagadas" name="filter_pagada" domain="[('pagada', '=', True)]"/>
-                <filter string="No Pagadas" name="filter_no_pagada" domain="[('pagada', '=', False)]"/>
-                
-                <separator/>
-                
-                <group expand="0" string="Agrupar Por">
-                    <filter string="Empleado" name="group_empleado" context="{'group_by': 'empleado_id'}"/>
-                    <filter string="Pagada" name="group_pagada" context="{'group_by': 'pagada'}"/>
-                    <filter string="Tipo de Multa" name="group_tipo" context="{'group_by': 'tipo_multa_id'}"/>
-                </group>
-            </search>
         </field>
     </record>
 
